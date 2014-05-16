@@ -31,7 +31,7 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#">Frontpage</a></li>
-						<li><a href="/about">About</a></li>
+						<li><a href="#about">About</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
@@ -39,10 +39,8 @@
 		<div class="container">
 			<!-- Main component for a primary marketing message or call to action -->
 			<div class="jumbotron">
-				<h1>Welcome to this fabulous page</h1>
-				<p>I have just started, so please have a coffe and come back in some weeks to have a look at my new page. You might need more than one cup of coffe.</p>
-				<p>
-				<a class="btn btn-lg btn-primary" href="/about" role="button">View about me &raquo;</a>
+				<h1>More will follow</h1>
+				<a class="btn btn-lg btn-primary" href="/" role="button">Head back to frontpage &raquo;</a>
 				</p>
 			</div>
 		</div>
