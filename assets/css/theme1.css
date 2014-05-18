@@ -2,7 +2,6 @@
 * @author: Jon Arild Nygård;
 * @colorscheme: http://colorschemedesigner.com/#3-42PhWhWg0g0;
 */
-
 .page {
 	min-height: 480px;
 	padding-top: 70px;
@@ -21,24 +20,24 @@
 /*
 * Buttons
 */
-.btn-primary {
+.btn-default {
 	color: white;
 	background-color: inherit;
 	border: 3px solid white;
 	border-radius: 0;
 }
-.btn-primary:hover {
+.btn-default:hover {
 	background-color: white;
 	border-color: white;
 	transition: all .5s ease-in-out;
 }
-#frontpage .btn-primary:hover {
+#frontpage .btn-default:hover {
 	color: #343464;
 }
-#about .btn-primary:hover {
+#about .btn-default:hover {
 	color: #80384E;
 }
-#social .btn-primary:hover {
+#social .btn-default:hover {
 	color: #587F38;
 }
 
