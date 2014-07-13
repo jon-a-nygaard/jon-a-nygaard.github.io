@@ -2,49 +2,42 @@
 * @author: Jon Arild Nygård;
 * @colorscheme: http://colorschemedesigner.com/#3-42PhWhWg0g0;
 */
+body {
+	color: black;
+}
+h1 {
+	text-align: center;
+}
 .page {
-	min-height: 480px;
-	padding-top: 70px;
-	color: white;
+	padding: 50px 0 30px 0;
 }
-#frontpage {
-	background-color: #343464;
+.navbar {
+	color: #FF5A09;
 }
-#about {
-	background-color: #80384E;
-}
-#social {
-	background-color: #587F38;
+.navbar-default .navbar-nav>li>a {
+	color: #FF5A09;
 }
 
 /*
 * Buttons
 */
 .btn-default {
-	color: white;
+	color: #FF5A09;
 	background-color: inherit;
-	border: 3px solid white;
+	border: 3px solid #FF5A09;
 	border-radius: 0;
 }
 .btn-default:hover {
-	background-color: white;
-	border-color: white;
+	background-color: #FF5A09;
+	border-color: #FF5A09;
+	color: white;
 	transition: all .5s ease-in-out;
 }
-#frontpage .btn-default:hover {
-	color: #343464;
-}
-#about .btn-default:hover {
-	color: #80384E;
-}
-#social .btn-default:hover {
-	color: #587F38;
-}
 
-@media screen and (max-width: 767px) {
+/*@media screen and (max-width: 767px) {
 	.page {
 		height: auto !important;
 		padding-top: 50px;
 		padding-bottom: 30px;
 	}
-}
+}*/
