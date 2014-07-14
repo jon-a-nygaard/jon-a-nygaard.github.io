@@ -3,21 +3,35 @@
 * @colorscheme: http://colorschemedesigner.com/#3-42PhWhWg0g0;
 */
 body {
-	color: black;
+	color: #393939;
 }
 h1 {
 	text-align: center;
+    color: #FF5A09;
 }
-.page {
-	padding: 50px 0 30px 0;
-}
+/* Navigation bar */
 .navbar {
 	color: #FF5A09;
+    background-color: #393939;
+    height: 60px;
 }
+.navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a {
 	color: #FF5A09;
+    padding-bottom: 5px;
 }
-
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    border-bottom: 5px solid white;
+}
+/* Page */
+.page {
+    padding: 60px 0 30px 0;
+}
+#about img {
+    max-height: 200px;
+}
 /*
 * Buttons
 */
@@ -33,11 +47,3 @@ h1 {
 	color: white;
 	transition: all .5s ease-in-out;
 }
-
-/*@media screen and (max-width: 767px) {
-	.page {
-		height: auto !important;
-		padding-top: 50px;
-		padding-bottom: 30px;
-	}
-}*/
