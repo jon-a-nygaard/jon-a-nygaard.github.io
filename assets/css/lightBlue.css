@@ -55,11 +55,14 @@ body {
 h1 {
   color: #2e4172;
 }
+h1 small {
+  color: inherit;
+}
 
 /* Navigation bar */
 .navbar {
   color: white;
-  background-color: #2D2D2D;
+  background-color: #2d2d2d;
   height: 60px;
 }
 
@@ -108,10 +111,17 @@ h1 {
 
 .portrait {
   text-align: center;
+  padding: 15px 0;
 }
 .portrait img {
   background-color: white;
   width: 100%;
   max-height: 300px;
   max-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #2d2d2d;
+  }
 }

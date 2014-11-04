@@ -20,5 +20,5 @@ jQuery(document).ready(function() {
 });
 function setPageHeight() {
 	height = jQuery(window).height();
-	jQuery(".page").css("height", height);
+	jQuery(".page").css("min-height", height);
 }
