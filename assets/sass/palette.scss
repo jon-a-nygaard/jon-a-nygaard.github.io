@@ -1,0 +1,42 @@
+$base-palette: (
+  base: #AA3939, 
+  colors: #FFAAAA #D46A6A #AA3939 #801515 #550000
+) !default;
+@import 'colorPalette';
+
+$main: #2E4172;
+// $main: #8085e8;
+$palette: palette($main);
+$stroke: black;
+$stroke-width: 3px;
+$color: white;
+#palette-view .col-md-2 {
+	height: 200px;
+	text-align: center;
+	font-size: 30px;
+	color: $color;
+	text-shadow:
+    $stroke-width $stroke-width 0 $stroke,
+    $stroke-width $stroke-width 0 $stroke,
+    $stroke-width $stroke-width 0 $stroke,
+    $stroke-width $stroke-width 0 $stroke,
+    $stroke-width $stroke-width 0 $stroke,
+    $stroke-width $stroke-width 0 $stroke;
+}
+.c1 {
+	background-color: map-get($palette, 'lightest');
+}
+.c2 {
+	background-color: map-get($palette, 'lighter');
+}
+.c3 {
+	background-color: map-get($palette, 'light');
+}
+.c4 {
+	background-color: map-get($palette, 'base');
+}
+.c5 {
+	background-color: map-get($palette, 'dark');
+	background-color: map-get($palette, 'darker');
+	background-color: map-get($palette, 'darkest');
+}

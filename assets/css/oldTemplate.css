@@ -1,0 +1,133 @@
+@charset "CP850";
+/*
+* @author: Jon Arild Nygård;
+* @colorscheme: http://colorschemedesigner.com/#3-42PhWhWg0g0;
+*/
+/**
+ * Initial palette used to define the diff between the base color and each color from the palette. There can be as many colors as one wants.
+ * 
+ * @Link https://ton.twitter.com/i/ton/data/dm/487926326314418176/487926326322823168/8M2k8xOp.png Initial color palette
+ *
+ * @type Map
+ */
+/**
+ * Function defining the difference between 2 colors
+ *
+ * @param {Color} $a - first color
+ * @param {Color} $b - second color
+ *
+ * @return {Map}  The color operations to do in order to find $b from $a where keys are the color functions to apply and values are the values to pass to these functions
+ */
+/**
+ * Compute the diff for each color from the initial palette
+ *
+ * @param {Map} $palette - palette
+ *
+ * @requires {function} color-diff
+ * 
+ * @return {List} list of diffs
+ */
+/**
+ * Palette diffs
+ * Same length as colors key from map-palette
+ *
+ * @type List
+ */
+/**
+ * Apply differences returned from `color-diff` function to a color in order to retrieve the second color
+ *
+ * @param {Color} $color - color to transform
+ * @param {Map} $diff - diff map
+ * 
+ * @return {Color} transformed color
+ */
+/**
+ * Create a palette from a base color
+ *
+ * @param {Color} $base-color - base color for the palette
+ *
+ * @requires {function} palette-diff
+ * @requires {function} apply-diff
+ * @requires {variable} $base-palette
+ *
+ * @return {List} list of colors
+ */
+/**
+ * Create a list of colors from the base color
+ * then turn in into a map with explicit keys
+ *
+ * @param {Color} $base-color - base color for the palette
+ *
+ * @requires {function} create-palette
+ *
+ * @return {Map}
+ */
+.class {
+  background-color: #ffdfcf;
+  background-color: #ff9764;
+  background-color: #ff5a09;
+  background-color: #ba3d00;
+  background-color: #7a2800;
+}
+
+body {
+  color: #393939;
+}
+
+h1 {
+  text-align: center;
+  color: #ff5a09;
+}
+
+/* Navigation bar */
+.navbar {
+  color: #ff5a09;
+  background-color: #393939;
+  height: 60px;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #ff5a09;
+  padding-bottom: 5px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+/* Page */
+.page {
+  padding: 60px 0 30px 0;
+}
+
+.wide-background {
+  width: 100%;
+  height: 300px;
+  background-image: url(/assets/images/grid.svg);
+  /*background-size: cover;*/
+  /*background-position: 50% 75%;*/
+}
+
+#about img {
+  max-height: 200px;
+}
+
+/*
+* Buttons
+*/
+.btn-default {
+  color: #ff5a09;
+  background-color: inherit;
+  border: 3px solid #ff5a09;
+  border-radius: 0;
+}
+
+.btn-default:hover {
+  background-color: #ff5a09;
+  border-color: #ff5a09;
+  color: white;
+  transition: all .5s ease-in-out;
+}

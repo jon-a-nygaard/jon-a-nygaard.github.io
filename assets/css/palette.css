@@ -1,0 +1,27 @@
+#palette-view .col-md-2 {
+  height: 200px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 3px 3px 0 black, 3px 3px 0 black, 3px 3px 0 black, 3px 3px 0 black, 3px 3px 0 black, 3px 3px 0 black;
+}
+
+.c1 {
+  background-color: #6d94f9;
+}
+
+.c2 {
+  background-color: #4163ba;
+}
+
+.c3 {
+  background-color: #2e4172;
+}
+
+.c4 {
+  background-color: #0f1d43;
+}
+
+.c5 {
+  background-color: #010511;
+}

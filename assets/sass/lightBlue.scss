@@ -1,0 +1,84 @@
+/*
+* @author: Jon Arild Nygård;
+* @colorscheme: http://colorschemedesigner.com/#3-42PhWhWg0g0;
+*/ 
+$base-palette: (
+  base: #AA3939, 
+  colors: #FFAAAA #D46A6A #AA3939 #801515 #550000
+) !default;
+// $primary-color: #393939;
+$main: #2E4172;
+@import 'colorPalette';
+$palette: palette($main);
+$primary-color: map-get($palette, 'base');
+$second-color: map-get($palette, 'light');
+$contrast-1: white;
+$contrast-2: black;
+.diversity-1 {
+	background-color: map-get($palette, 'lighter');
+	color: $contrast-1;
+}
+.c2 {
+	background-color: map-get($palette, 'lighter');
+}
+.c3 {
+	background-color: map-get($palette, 'light');
+}
+.c4 {
+	background-color: map-get($palette, 'base');
+}
+.c5 {
+	background-color: map-get($palette, 'dark');
+	background-color: map-get($palette, 'darker');
+	background-color: map-get($palette, 'darkest');
+}
+body {
+	color: $primary-color;
+}
+h1 {
+	text-align: center;
+    color: $second-color;
+}
+/* Navigation bar */
+.navbar {
+	color: $contrast-1;
+    background-color: $primary-color;
+    height: 60px;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+	color: $contrast-1;
+    padding-bottom: 5px;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:hover {
+    color: $contrast-1;
+    border-bottom: 5px solid $contrast-1;
+}
+/* Page */
+.page {
+    padding: 60px 0 30px 0;
+}
+.wide-background {
+	width: 100%;
+	height: 300px;
+	// background-image: url(/assets/images/grid.svg);
+}
+#about img {
+    max-height: 200px;
+}
+/*
+* Buttons
+*/
+.btn-default {
+	color: $second-color;
+	background-color: inherit;
+	border: 3px solid $second-color;
+	border-radius: 0;
+}
+.btn-default:hover {
+	background-color: $second-color;
+	border-color: $second-color;
+	color: white;
+	transition: all .5s ease-in-out;
+}
