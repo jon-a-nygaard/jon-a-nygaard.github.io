@@ -24,19 +24,42 @@
   background-color: #010511;
 }
 
+.page.stl-1 {
+  color: white;
+  background-color: #2D2D2D;
+}
+.page.stl-1 h1 {
+  color: white;
+}
+
+.page.stl-2 {
+  color: black;
+  background-color: #E4E4E4;
+}
+.page.stl-2 h1 {
+  color: black;
+}
+
+.page.stl-3 {
+  color: black;
+  background-color: #B6B6B6;
+}
+.page.stl-3 h1 {
+  color: black;
+}
+
 body {
   color: #0f1d43;
 }
 
 h1 {
-  text-align: center;
   color: #2e4172;
 }
 
 /* Navigation bar */
 .navbar {
   color: white;
-  background-color: #0f1d43;
+  background-color: #2D2D2D;
   height: 60px;
 }
 
@@ -81,4 +104,14 @@ h1 {
   border-color: #2e4172;
   color: white;
   transition: all .5s ease-in-out;
+}
+
+.portrait {
+  text-align: center;
+}
+.portrait img {
+  background-color: white;
+  width: 100%;
+  max-height: 300px;
+  max-width: 300px;
 }

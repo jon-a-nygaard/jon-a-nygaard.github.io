@@ -32,17 +32,38 @@ $contrast-2: black;
 	background-color: map-get($palette, 'darker');
 	background-color: map-get($palette, 'darkest');
 }
+.page.stl-1 {
+	color: $contrast-1;
+	background-color: #2D2D2D;
+	h1 {
+		color: $contrast-1;
+	}
+}
+.page.stl-2 {
+	color: $contrast-2;
+	background-color: #E4E4E4;
+	h1 {
+		color: $contrast-2;
+	}	
+}
+.page.stl-3 {
+	color: $contrast-2;
+	background-color: #B6B6B6;
+	h1 {
+		color: $contrast-2;
+	}
+}
 body {
 	color: $primary-color;
 }
 h1 {
-	text-align: center;
+	// text-align: left;
     color: $second-color;
 }
 /* Navigation bar */
 .navbar {
 	color: $contrast-1;
-    background-color: $primary-color;
+    background-color: #2D2D2D;
     height: 60px;
 }
 .navbar-default .navbar-brand,
@@ -81,4 +102,14 @@ h1 {
 	border-color: $second-color;
 	color: white;
 	transition: all .5s ease-in-out;
+}
+
+.portrait {
+	text-align: center;
+	img {
+		background-color: white;
+		width: 100%;
+		max-height: 300px;
+		max-width: 300px;
+	}
 }
