@@ -114,10 +114,7 @@ h1 small {
   padding: 15px 0;
 }
 .portrait img {
-  background-color: white;
   width: 100%;
-  max-height: 300px;
-  max-width: 300px;
 }
 
 @media screen and (max-width: 768px) {
