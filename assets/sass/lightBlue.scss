@@ -75,9 +75,6 @@ h1 {
     height: auto;
     border-bottom: $navbar-border+px solid $contrast-1;
 }
-.navbar-collapse {
-	border-top: $navbar-border+px solid $contrast-1;
-}
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a {
 	color: $contrast-1;
@@ -130,5 +127,6 @@ h1 {
 @media screen and (max-width: 768px) {
 	.navbar-collapse {
 		background-color: $navbar-background;
+		border-top: $navbar-border+px solid $contrast-1;
 	}
 }
