@@ -63,24 +63,34 @@ h1 small {
 .navbar {
   color: white;
   background-color: #2d2d2d;
-  height: 60px;
+  height: auto;
+  border-bottom: 5px solid white;
+}
+
+.navbar-collapse {
+  border-top: 5px solid white;
 }
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
   color: white;
-  padding-bottom: 5px;
+  font-weight: bolder;
+  padding: 24px 16px;
+  text-transform: uppercase;
 }
 
-.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
+
 .navbar-default .navbar-nav > li > a:hover {
   color: white;
-  border-bottom: 5px solid white;
+  background-color: black;
 }
 
 /* Page */
 .page {
-  padding: 60px 0 30px 0;
+  padding: 73px 0 30px 0;
 }
 
 .wide-background {

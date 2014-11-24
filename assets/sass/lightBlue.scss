@@ -15,6 +15,9 @@ $second-color: map-get($palette, 'light');
 $contrast-1: white;
 $contrast-2: black;
 $navbar-background: #2D2D2D;
+$navbar-content-height: 68;
+$navbar-border: 5;
+$navbar-height: $navbar-content-height + $navbar-border;
 .diversity-1 {
 	background-color: map-get($palette, 'lighter');
 	color: $contrast-1;
@@ -69,21 +72,30 @@ h1 {
 .navbar {
 	color: $contrast-1;
     background-color: $navbar-background;
-    height: 60px;
+    height: auto;
+    border-bottom: $navbar-border+px solid $contrast-1;
+}
+.navbar-collapse {
+	border-top: $navbar-border+px solid $contrast-1;
 }
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a {
 	color: $contrast-1;
-    padding-bottom: 5px;
+	font-weight: bolder;
+    padding: 24px 16px;
+    text-transform: uppercase;
 }
-.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:hover {
+	color: $contrast-1;
+}
 .navbar-default .navbar-nav>li>a:hover {
     color: $contrast-1;
-    border-bottom: 5px solid $contrast-1;
+    background-color: $contrast-2;
+    // border-bottom: 5px solid $contrast-1;
 }
 /* Page */
 .page {
-    padding: 60px 0 30px 0;
+    padding: $navbar-height+px 0 30px 0;
 }
 .wide-background {
 	width: 100%;
