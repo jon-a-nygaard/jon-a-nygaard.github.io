@@ -67,7 +67,6 @@ h1 small {
   border-bottom: 5px solid white;
 }
 
-.navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
   color: white;
   font-weight: bolder;
@@ -75,13 +74,20 @@ h1 small {
   text-transform: uppercase;
 }
 
-.navbar-default .navbar-brand:hover {
-  color: white;
-}
-
 .navbar-default .navbar-nav > li > a:hover {
   color: white;
   background-color: black;
+}
+
+.navbar-brand {
+  height: 68px;
+}
+.navbar-brand svg {
+  height: 100%;
+  fill: white;
+}
+.navbar-brand svg #jn-logo-sign {
+  fill: orange;
 }
 
 /* Page */

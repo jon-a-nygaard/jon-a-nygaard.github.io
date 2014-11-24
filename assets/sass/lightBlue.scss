@@ -14,6 +14,7 @@ $primary-color: map-get($palette, 'base');
 $second-color: map-get($palette, 'light');
 $contrast-1: white;
 $contrast-2: black;
+$collor-dollar-sign: orange;
 $navbar-background: #2D2D2D;
 $navbar-content-height: 68;
 $navbar-border: 5;
@@ -75,20 +76,26 @@ h1 {
     height: auto;
     border-bottom: $navbar-border+px solid $contrast-1;
 }
-.navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a {
 	color: $contrast-1;
 	font-weight: bolder;
     padding: 24px 16px;
     text-transform: uppercase;
 }
-.navbar-default .navbar-brand:hover {
-	color: $contrast-1;
-}
 .navbar-default .navbar-nav>li>a:hover {
     color: $contrast-1;
     background-color: $contrast-2;
     // border-bottom: 5px solid $contrast-1;
+}
+.navbar-brand {
+	height: $navbar-content-height+px;
+	svg {
+		height: 100%;
+		fill: $contrast-1;
+		#jn-logo-sign {
+			fill: $collor-dollar-sign;
+		}
+	}
 }
 /* Page */
 .page {
