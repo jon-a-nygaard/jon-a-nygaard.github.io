@@ -59,6 +59,16 @@ h1 small {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
 /* Navigation bar */
 .navbar {
   color: white;
