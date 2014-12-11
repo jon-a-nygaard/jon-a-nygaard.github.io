@@ -1,0 +1,26 @@
+URL:      http://jon-a-nygaard.github.io/
+Score:    68
+Strategy: desktop
+UTC-Time: 2014-11-11 20:60:70
+
+Number Resources:             9
+Number Hosts:                 3
+Total Request:                695 B
+Number Static Resources:      8
+Html Response:                13.6 kB
+Css Response:                 123.99 kB
+Image Response:               417.53 kB
+Javascript Response:          127.56 kB
+Number Js Resources:          3
+Number Css Resources:         3
+
+Avoid landing page redirects:                                                   0
+Enable compression:                                                             0
+Leverage browser caching:                                                       2.5
+Reduce server response time:                                                    0
+Minify CSS:                                                                     0
+Minify HTML:                                                                    0
+Minify JavaScript:                                                              0
+Eliminate render-blocking JavaScript and CSS in above-the-fold content:         6
+Optimize images:                                                                39.5
+Prioritize visible content:                                                     0
