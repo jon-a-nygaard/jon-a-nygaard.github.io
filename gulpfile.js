@@ -59,14 +59,79 @@ var gulp = require('gulp'),
         });
 
         // TODO: write stats to csv file, alternatively json
-        output = [];
-        fs.readFile('benchmarks/psi-mobile.csv', 'utf8', function (err, data) {
+        fs.readFile('benchmarks/psi-' + strategy + '.csv', 'utf8', function (err, data) {
+            var arr = [],
+                index,
+                csv;
+                cvsToArray = function (csv) {
+                    var rows = csv.split("\r\n");
+                    for (var i = 0; i < rows.length; i++) {
+                        rows[i] = rows[i].split(", ");
+                    }
+                    return rows;
+                },
+                arrayToCsv = function(arr) {
+                    for (i = 0; i < arr.length; i++) {
+                        arr[i] = arr[i].join(", ");
+                    }
+                    arr = arr.join("\r\n");
+                    return arr;
+                }
+                addNewRow = function (arr, def) {
+                    var row,
+                        cells;
+                    arr.push([]);
+                    row = arr.length - 1;
+                    cells = arr[0].length;
+                    for (i = 0; i < cells; i++) {
+                        arr[row][i] = def;
+                    }
+                    return arr;
+                },
+                addNewColumn = function (arr, title, def) {
+                    var col;
+                    arr[0].push(title);
+                    col = arr[0].indexOf(title);
+                    for (i = 1; i < arr.length; i++) {
+                        arr[i][col] = def;
+                    }
+                    return arr;
+                };
             if (err) {
                 console.log(err);
             } else {
                 console.log("The " + strategy + " csv file was collected!");
+                // Seperate into arrays
+                arr = cvsToArray(data);
+                arr = addNewRow(arr, 0);
+                arr[arr.length - 1][0] = date;
+                // Add all the stats
+                for (var prop in stats) {
+                    index = arr[0].indexOf(prop);
+                    if (index === -1) {
+                        arr = addNewColumn(arr, prop, 0);
+                        index = arr[0].indexOf(prop);
+                    }
+                    arr[arr.length - 1][index] = stats[prop];
+                }
+                // Add all the results
+                for (var prop in results) {
+                    index = arr[0].indexOf(prop);
+                    if (index === -1) {
+                        arr = addNewColumn(arr, prop, 0);
+                        index = arr[0].indexOf(prop);
+                    }
+                    arr[arr.length - 1][index] = numformat(results[prop].ruleImpact, 1);
+                }
+                csv = arrayToCsv(arr);
+                fs.writeFile("benchmarks/psi-" + strategy + ".csv", csv, function(err) {
+                    if(err) {
+                        console.log(err);
+                    } else {
+                        console.log("The " + strategy + " csv file was saved!");
+                    }
+                });
             }
-            output = data;
         });
     };
 
@@ -80,8 +145,22 @@ gulp.task('scripts', function () {
 gulp.task('psi', function () {
     var strategyD = "desktop",
         strategyM = "mobile",
-        d = new Date(),
-        date = d.toUTCString();
+        strformat = function (string, len, ch) {
+            var empty = new Array(len + 1).join(ch);
+            return String(string + empty).slice(0, len);
+        },
+        getMyDate = function () {
+            var d = new Date(),
+                date = "";
+            date += d.getFullYear() + "-";
+            date += strformat(d.getMonth(), 2, "0") + "-";
+            date += strformat(d.getDate(), 2, "0") + " ";
+            date += strformat(d.getHours(), 2, "0") + ":";
+            date += strformat(d.getMinutes(), 2, "0") + ":";
+            date += strformat(d.getSeconds(), 2, "0");
+            return date;
+        },
+        date = getMyDate();
     psi({
         key: psiKey,
         url: psiSite,
