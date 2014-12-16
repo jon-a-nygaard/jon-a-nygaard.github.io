@@ -1,9 +1,13 @@
-@charset "CP850";
+img {
+  max-width: 100%;
+}
+
+/*@charset "CP850";
 /*
 * @author: Jon Arild Nygård;
 * @colorscheme: http://colorschemedesigner.com/#3-42PhWhWg0g0;
 */
-.diversity-1 {
+/*.diversity-1 {
   background-color: #4163ba;
   color: white;
 }
@@ -22,9 +26,9 @@
 
 .c5 {
   background-color: #010511;
-}
+}*/
 
-.page.stl-1 {
+/*.page.stl-1 {
   color: white;
   background-color: #2D2D2D;
 }
@@ -69,7 +73,7 @@ img {
   float: none;
 }
 
-/* Navigation bar */
+Navigation bar 
 .navbar {
   color: white;
   background-color: #2d2d2d;
@@ -100,7 +104,7 @@ img {
   fill: orange;
 }
 
-/* Page */
+/* Page 
 .page {
   padding: 73px 0 30px 0;
 }
@@ -116,7 +120,7 @@ img {
 
 /*
 * Buttons
-*/
+
 .btn-default {
   color: #2e4172;
   background-color: inherit;
@@ -144,3 +148,4 @@ img {
     border-top: 5px solid white;
   }
 }
+*/
