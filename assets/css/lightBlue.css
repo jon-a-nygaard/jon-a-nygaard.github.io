@@ -1,5 +1,29 @@
 img {
   max-width: 100%;
+  max-height: 100%;
+}
+.navbar-nav>li>a {
+  line-height: 41px;
+  font-size: 20px;
+}
+.navbar-brand {
+  height: 60px;
+}
+.page {
+  padding: 90px 0 30px 0;
+  border-bottom: 1px solid #FFFFFF;
+}
+.tagline {
+  padding: 90px 0 30px 0;
+}
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+.dl-horizontal dt {
+  text-align: left;
+  padding-top: 5px;
 }
 
 /*@charset "CP850";
@@ -67,11 +91,7 @@ img {
   max-width: 100%;
 }
 
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-}
+
 
 Navigation bar 
 .navbar {

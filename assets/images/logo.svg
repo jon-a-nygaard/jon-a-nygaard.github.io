@@ -10,6 +10,14 @@
    height="59.412617"
    viewBox="0, 0, 300, 59.412617"
    id="jn-logo">
+  <style type="text/css">
+    #jn-logo {
+        fill: #FFFFFF;
+    }
+    #jn-logo-sign {
+        fill: #2b3e50;
+    }
+  </style>
   <metadata
      id="metadata3000">
     <rdf:RDF>
