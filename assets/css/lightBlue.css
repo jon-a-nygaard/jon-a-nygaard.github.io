@@ -1,3 +1,9 @@
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: #43ac6a;
+}
 img {
   max-width: 100%;
   max-height: 100%;
@@ -11,7 +17,7 @@ img {
 }
 .page {
   padding: 90px 0 30px 0;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #222222;
 }
 .tagline {
   padding: 90px 0 30px 0;
