@@ -1,8 +1,8 @@
 ---
 layout: default
-title: test
+title: Blog
 ---
 
 Testing
 ===
-- [ ] asdasd
+\- [ ] asdasd &#58; 
