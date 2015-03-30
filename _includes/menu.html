@@ -14,14 +14,15 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right text-right">
-				{% for node in site.pages %}
-					{% assign url = node.url | remove: 'index.html' %}
-					{%if page.url == node.url %}
-					<li><a href="" class="active">{{ node.title }}</a></li>
-					{% else %}
-					<li><a href="{{ url }}">{{ node.title }}</a></li>
-					{% endif %}
-				{% endfor %}
+			{% assign sorted_pages = site.pages | sort: "menu_order" %}
+			{% for node in sorted_pages %}
+				{% assign url = node.url | remove: 'index.html' %}
+				{%if page.url == node.url %}
+				<li><a href="" class="active">{{ node.title }}</a></li>
+				{% else %}
+				<li><a href="{{ url }}">{{ node.title }}</a></li>
+				{% endif %}
+			{% endfor %}
 			</ul>
 		</div>
 	</div>
