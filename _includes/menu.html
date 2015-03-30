@@ -13,11 +13,16 @@
 			</a>
 		</div>
 		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/">Home</a></li>
-				<li><a href="/projects">Projects</a></li>
-				<li><a href="/blog">Blog</a></li>
+			<ul class="nav navbar-nav navbar-right text-right">
+				{% for node in site.pages %}
+					{% assign url = node.url | remove: 'index.html' %}
+					{%if page.url == node.url %}
+					<li><a href="" class="active">{{ node.title }}</a></li>
+					{% else %}
+					<li><a href="{{ url }}">{{ node.title }}</a></li>
+					{% endif %}
+				{% endfor %}
 			</ul>
-		</div><!--/.nav-collapse -->
+		</div>
 	</div>
 </div>

@@ -25,6 +25,12 @@ img {
   line-height: 41px;
   font-size: 20px;
 }
+.navbar-default .navbar-nav>li>a.active {
+  background-color: #272727;
+  color: #b3b3b3;
+  border-bottom: 5px solid #43ac6a;
+  padding-bottom: 7px;
+}
 .navbar-brand {
   height: 60px;
 }
