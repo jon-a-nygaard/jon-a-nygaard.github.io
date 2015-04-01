@@ -3,6 +3,10 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     spawn = require('child_process').spawn,
+    paths = {
+        scripts: ['assets/js/*js'],
+        jekyll: ['index.html', '_includes', '_layouts', 'blog/*.*', 'projects/*.*', 'dist/*.*']
+    },
     psi = require('psi'),
     psiSite = "http://jon-a-nygaard.github.io/",
     psiKey = "AIzaSyBOGPcfy8Jxlpg6rLpwn7lh79Hlj-6gSMU",
@@ -135,12 +139,7 @@ var gulp = require('gulp'),
             }
         });
     };
-
-var paths = {
-  scripts: ['assets/js/*js'],
-  jekyll: ['index.html']
-};
-
+ 
 gulp.task('watch', function () {
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.jekyll, ['jekyll']);

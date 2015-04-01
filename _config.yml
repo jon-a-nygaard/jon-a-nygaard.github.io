@@ -1,1 +1,1 @@
-exclude: [node_modules/, gulpfile.js, package.json]
+exclude: [gulpfile.js, package.json, README.md, node_modules/]
