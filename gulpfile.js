@@ -55,7 +55,7 @@ var gulp = require('gulp'),
         for (var prop in results) {
             output += strformat(results[prop].localizedRuleName + ":", 80) + numformat(results[prop].ruleImpact, 1) + "\n";
         }
-        fs.writeFile("benchmarks/psi-" + strategy + ".txt", output, function(err) {
+        fs.writeFile("assets/benchmarks/psi-" + strategy + ".txt", output, function(err) {
             if(err) {
                 console.log(err);
             } else {
@@ -64,7 +64,7 @@ var gulp = require('gulp'),
         });
 
         // TODO: write stats to csv file, alternatively json
-        fs.readFile('benchmarks/psi-' + strategy + '.csv', 'utf8', function (err, data) {
+        fs.readFile('assets/benchmarks/psi-' + strategy + '.csv', 'utf8', function (err, data) {
             var arr = [],
                 index,
                 csv;
@@ -129,7 +129,7 @@ var gulp = require('gulp'),
                     arr[arr.length - 1][index] = numformat(results[prop].ruleImpact, 1);
                 }
                 csv = arrayToCsv(arr);
-                fs.writeFile("benchmarks/psi-" + strategy + ".csv", csv, function(err) {
+                fs.writeFile("assets/benchmarks/psi-" + strategy + ".csv", csv, function(err) {
                     if(err) {
                         console.log(err);
                     } else {
