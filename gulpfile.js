@@ -150,7 +150,9 @@ gulp.task('watch', function () {
 
 gulp.task('sass', function () {
     gulp.src(paths.sass)
-        .pipe(sass())
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }))
         .pipe(gulp.dest('dist'));
 });
 
