@@ -2,8 +2,10 @@ var gulp = require('gulp'),
     fs = require('fs'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
+    sass = require('gulp-sass'),
     spawn = require('child_process').spawn,
     paths = {
+        sass: ['assets/sass/*.scss'],
         scripts: ['assets/js/*js'],
         jekyll: ['index.html', '_includes', '_layouts', 'blog/*.*', 'projects/*.*', 'dist/*.*']
     },
@@ -141,8 +143,15 @@ var gulp = require('gulp'),
     };
  
 gulp.task('watch', function () {
+    gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.jekyll, ['jekyll']);
+});
+
+gulp.task('sass', function () {
+    gulp.src(paths.sass)
+        .pipe(sass())
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('scripts', function () {
