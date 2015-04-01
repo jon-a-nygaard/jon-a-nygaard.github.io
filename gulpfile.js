@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     fs = require('fs'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
+    spawn = require('child_process').spawn,
     psi = require('psi'),
     psiSite = "http://jon-a-nygaard.github.io/",
     psiKey = "AIzaSyBOGPcfy8Jxlpg6rLpwn7lh79Hlj-6gSMU",
@@ -137,10 +138,12 @@ var gulp = require('gulp'),
 
 var paths = {
   scripts: ['assets/js/*js'],
+  jekyll: ['index.html']
 };
 
 gulp.task('watch', function () {
     gulp.watch(paths.scripts, ['scripts']);
+    gulp.watch(paths.jekyll, ['jekyll']);
 });
 
 gulp.task('scripts', function () {
@@ -148,6 +151,13 @@ gulp.task('scripts', function () {
     .pipe(concat('all.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('jekyll', function () {
+    var jekyll = spawn('jekyll.bat', ['build']);
+    jekyll.on('exit', function (code) {
+        console.log('-- Finished Jekyll Build --');
+    });
 });
 
 gulp.task('psi', function () {
