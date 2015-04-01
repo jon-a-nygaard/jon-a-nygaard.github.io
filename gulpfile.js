@@ -135,8 +135,16 @@ var gulp = require('gulp'),
         });
     };
 
+var paths = {
+  scripts: ['assets/js/*js'],
+};
+
+gulp.task('watch', function () {
+    gulp.watch(paths.scripts, ['scripts']);
+});
+
 gulp.task('scripts', function () {
-    gulp.src('assets/js/*js')
+    gulp.src(paths.scripts)
     .pipe(concat('all.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist'));
