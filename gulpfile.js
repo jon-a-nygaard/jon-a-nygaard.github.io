@@ -149,6 +149,15 @@ gulp.task('watch', function () {
 });
 
 gulp.task('sass', function () {
+    fs.readdir('dist', function (error, files) {
+        if (error) throw error;
+        var fil = files.filter(function (fileName) {
+            return /.*.css/.test(fileName);
+        });
+        for (var i in fil) {
+            fs.unlink('dist/' + fil[i]);
+        }
+    });
     gulp.src(paths.sass)
         .pipe(sass({
             outputStyle: 'compressed'
