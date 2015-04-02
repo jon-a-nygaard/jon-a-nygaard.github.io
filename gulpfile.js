@@ -140,6 +140,29 @@ var gulp = require('gulp'),
                 });
             }
         });
+    }, deleteFiles = function (regex, folder, fs) {
+        var fil;
+        fs.readdir(folder, function (error, files) {
+            if (error) throw error;
+            fil = files.filter(function (fileName) {
+                return regex.test(fileName);
+            });
+            for (var i in fil) {
+                fs.unlink(folder + fil[i]);
+            }
+        });
+    }, deleteFolderRecursive = function(path) {
+        if(fs.existsSync(path)) {
+            fs.readdirSync(path).forEach(function(file,index){
+                var curPath = path + "/" + file;
+                if(fs.lstatSync(curPath).isDirectory()) { // recurse
+                    deleteFolderRecursive(curPath);
+                } else { // delete file
+                    fs.unlinkSync(curPath);
+                }
+            });
+            fs.rmdirSync(path);
+        }
     };
  
 gulp.task('watch', function () {
@@ -149,15 +172,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('sass', function () {
-    fs.readdir('dist', function (error, files) {
-        if (error) throw error;
-        var fil = files.filter(function (fileName) {
-            return /.*.css/.test(fileName);
-        });
-        for (var i in fil) {
-            fs.unlink('dist/' + fil[i]);
-        }
-    });
+    deleteFiles(/.*.css/, 'dist/', fs);
     gulp.src(paths.sass)
         .pipe(sass({
             outputStyle: 'compressed'
@@ -166,6 +181,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('scripts', function () {
+    deleteFiles(/.*.js/, 'dist/', fs);
     gulp.src(paths.scripts)
     .pipe(concat('all.min.js'))
     .pipe(uglify())
@@ -173,6 +189,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('jekyll', function () {
+    deleteFolderRecursive('_site/');
     var jekyll = spawn('jekyll.bat', ['build']);
     jekyll.on('exit', function (code) {
         console.log('-- Finished Jekyll Build --');
