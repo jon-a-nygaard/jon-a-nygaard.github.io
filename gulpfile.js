@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     paths = {
         sass: ['assets/sass/*.scss'],
         scripts: ['assets/js/*js'],
-        jekyll: ['index.html', '_includes', '_layouts', 'blog/*.*', 'projects/*.*', 'dist/*.*']
+        jekyll: ['_config.yml', 'index.html', '_includes', '_layouts', 'blog/*.*', 'projects/*.*', 'dist/*.*']
     },
     psi = require('psi'),
     psiSite = "http://jon-a-nygaard.github.io/",
