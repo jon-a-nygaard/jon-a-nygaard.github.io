@@ -1,1 +1,11 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" font-family="courier" width="360" height="80"><text x="0" y="0" font-size="100" dominant-baseline="hanging" fill="#FFFFFF"><tspan dominant-baseline="hanging" fill="#43ac6a">JN</tspan>-DEV</text></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M 0,50 50,100 50,0 Z" fill="#04819e" />
+  <path d="m 50,0 0,100 50,-50 Z" fill="#ff7f00" />
+  <g fill="#ffffff" transform="scale(0.99999513,1.0000049)">
+    <path d="m 27.000132,67.517308 c 1.241175,1.466844 3.610692,2.482351 6.600797,2.482351 7.841974,0 10.719245,-4.795452 10.719245,-8.801064 l 0,-31.198643 -7.108552,0 0,31.142226 c 0,1.184759 -1.128341,3.215773 -3.610693,3.215773 -1.184758,0 -2.256683,-0.394919 -3.046522,-1.015507 l -3.554275,4.174864 z" />
+  </g>
+  <g fill="#ffffff" transform="scale(0.83666003,1.1952286)">
+    <path d="m 77.689858,25.0998 0,18.549948 -0.09562,0 -5.54586,-18.549948 -6.310807,0 0,33.4664 5.976143,0 0,-19.171466 0.09562,0 5.880524,19.171466 5.976143,0 0,-33.4664 -5.976143,0 z" />
+  </g>
+</svg>
